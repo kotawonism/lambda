@@ -20,16 +20,11 @@ FILEDOWNLOADPATH = '/tmp/out.csv'
 # 昨日日付を取得
 yesterday = datetime.strftime(datetime.today() - timedelta(days=1),'%Y/%m/%d/')
 
-S3_OUTPUT = 's3://aispr-prod-waf-athena/' + yesterday
-S3_BUCKET ='aispr-prod-waf-athena'
-DATABASE = 'mydatabase'
-TABLE = 'waf-logs'
+S3_OUTPUT = 'S3_path' + yesterday
+S3_BUCKET ='S3_bucketname'
+DATABASE = 'Athena_DB＿name'
+TABLE = 'Athena_table_name'
 print(S3_OUTPUT)
-
-# メール(AWS SES)設定
-#SES_REGION = "us-east-1"
-#SRC_MAIL = "cloudwatch@rockwave.co.jp"
-#DST_MAIL = "cloudwatch@rockwave.co.jp"
 
 # number of retries
 RETRY_COUNT = 300
